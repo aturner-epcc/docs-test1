@@ -3,3 +3,21 @@ theme:
 
 site_name: ARCHER2
 
+nav:
+  - "Home": index.md
+  - "Quickstart": 
+    - quick-start/quickstart-users.md
+    - quick-start/quickstart-developers.md
+  - "User and Best Practice Guide":
+    - user-guide/connecting.md
+    - user-guide/data.md
+    - user-guide/sw-environment.md
+    - user-guide/scheduler.md
+    - user-guide/io.md
+    - user-guide/dev-environment.md
+    - user-guide/containers.md
+    - user-guide/python.md
+    - user-guide/analysis.md
+    - user-guide/debug.md
+    - user-guide/profile.md
+    - user-guide/tuning.md
