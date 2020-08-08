@@ -1,5 +1,7 @@
 theme:
   name: material
+  palette:
+    logo: images/archer2_white_transparent.png
 
 site_name: ARCHER2
 
@@ -21,3 +23,4 @@ nav:
     - user-guide/debug.md
     - user-guide/profile.md
     - user-guide/tuning.md
+
