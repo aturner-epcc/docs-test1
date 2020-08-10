@@ -4,10 +4,12 @@ theme:
   logo: images/archer2_white_transparent.png
   palette:
     scheme: default
-    primary: indigo
+    primary: #33806E
   features:
     - tabs
-    
+
+extra_css:
+  - stylesheets/archer2.css
 
 site_name: ARCHER2 User Documentation
 
