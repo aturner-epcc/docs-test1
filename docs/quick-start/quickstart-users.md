@@ -1,17 +1,8 @@
 # Quickstart for users
 
-<div class="warning">
-
-<div class="admonition-title">
-
-Warning
-
-</div>
-
-The ARCHER2 Service is not yet available. This documentation is in
-development.
-
-</div>
+!!! warning
+    The ARCHER2 Service is not yet available. This documentation is in
+    development.
 
 This guide aims to quickly enable new users to get up and running on
 ARCHER2 by running through the process of getting an ARCHER2 account,
@@ -19,21 +10,12 @@ logging in and running your first job.
 
 ## Request an account on ARCHER2
 
-<div class="warning">
-
-<div class="admonition-title">
-
-Warning
-
-</div>
-
-You need to use both a password and a passphrase-protected SSH key pair
-to log into ARCHER2. You get the password from SAFE but will need to
-setup your own SSH key pair and add the public part to your account via
-SAFE before you will be able to log in. We cover the authentication
-steps below.
-
-</div>
+!!! tip
+    You need to use both a password and a passphrase-protected SSH key pair
+    to log into ARCHER2. You get the password from SAFE but will need to
+    setup your own SSH key pair and add the public part to your account via
+    SAFE before you will be able to log in. We cover the authentication
+    steps below.
 
 ### Obtain an account on the SAFE website
 
@@ -78,10 +60,10 @@ to as LDAP passwords by the system).
 
 How you generate your SSH key pair depends on which operating system you
 use and which SSH client you use to connect to ARCHER2. We will not
-cover the details on generating an SSH key pair here, but \[detailed
+cover the details on generating an SSH key pair here, but [detailed
 information on generating an SSH key pair is available in the ARCHER2
 User and Best Practice
-Guide\](<https://docs.archer2.ac.uk/user-guide/connecting.html>).
+Guide](https://docs.archer2.ac.uk/user-guide/connecting.html).
 
 Once you have generated your SSH key pair, you should add the public
 part to your login account using SAFE:
@@ -121,18 +103,9 @@ easy-to-remember password. Your new password should conform to [the
 ARCHER2 Password
 Policy](https://www.archer2.ac.uk/about/policies/passwords_usernames.html).
 
-<div class="note">
-
-<div class="admonition-title">
-
-Note
-
-</div>
-
-When you change your password on the service machine in this way, this
-is not reflected on the SAFE.
-
-</div>
+!!! note
+    When you change your password on the service machine in this way, this
+    is not reflected on the SAFE.
 
 ## Login to ARCHER2
 
@@ -145,50 +118,29 @@ key pair. Once you have entered your passphrase successfully, you will
 then be prompted for your password. You need to enter both correctly to
 be able to access ARCHER2.
 
-<div class="note">
+!!! note
+    If your SSH key pair is not stored in the default location (usually
+    `~/.ssh/id_rsa`) on your local system, you may need to specify the path
+    to the private part of the key wih the `-i` option to `ssh`. For
+    example, if your key is in a file called `keys/id_rsa_archer2` you would
+    use the command `ssh -i keys/id_rsa_archer2
+    username@login.archer2.ac.uk` to log in.
 
-<div class="admonition-title">
+!!! note
+    When you first log into ARCHER2, you will be prompted to change your
+    initial password. This is a three step process:
 
-Note
-
-</div>
-
-If your SSH key pair is not stored in the default location (usually
-`~/.ssh/id_rsa`) on your local system, you may need to specify the path
-to the private part of the key wih the `-i` option to `ssh`. For
-example, if your key is in a file called `keys/id_rsa_archer2` you would
-use the command `ssh -i keys/id_rsa_archer2
-username@login.archer2.ac.uk` to log in.
-
-</div>
-
-<div class="note">
-
-<div class="admonition-title">
-
-Note
-
-</div>
-
-When you first log into ARCHER2, you will be prompted to change your
-initial password. This is a three step process:
-
-1.  When promoted to enter your *ldap password*: Re-enter the password
+    1.  When promoted to enter your *ldap password*: Re-enter the password
     you retrieved from SAFE
-2.  When prompted to enter your new password: type in a new password
-3.  When prompted to re-enter the new password: re-enter the new
+    2.  When prompted to enter your new password: type in a new password
+    3.  When prompted to re-enter the new password: re-enter the new
     password
 
-Your password has now been changed
+    Your password has now been changed
 
-</div>
-
-<div class="seealso">
-
-More information on connecting to ARCHER2 is available in
-`../user-guide/connecting`.
-
-</div>
+!!! tip
+    More information on connecting to ARCHER2 is available in
+    [the User and Best Practice Guide: Connecting to ARCHER2](../user-guide/connecting).
 
 ## File systems and manipulating data
 
@@ -224,12 +176,9 @@ Top tips for managing data on ARCHER2:
     automatically verify the integrity of an archive and examples of how
     to do this.
 
-<div class="seealso">
-
-Information on best practice in managing you data is available in the
-section `../user-guide/data`.
-
-</div>
+!!! tip
+    Information on best practice in managing you data is available in the
+    [User and Best Practice Guide: Data management and transfer](../user-guide/data`).
 
 ## Accessing software
 
@@ -260,20 +209,11 @@ example, `vasp/5/5.4.4` and `vasp/6/6.1.0` are two available versions of
 VASP. Furthermore, a default version may be specified and will be used
 if no version is provided by the user.
 
-<div class="note">
-
-<div class="admonition-title">
-
-Note
-
-</div>
-
-VASP is licensed software, as are some other software packages on
-ARCHER2. You must have a valid licence to use licensed software on
-ARCHER2. Often you will need to request access through the SAFE. More on
-this below.
-
-</div>
+!!! warning
+    VASP is licensed software, as are some other software packages on
+    ARCHER2. You must have a valid licence to use licensed software on
+    ARCHER2. Often you will need to request access through the SAFE. More on
+    this below.
 
 The `module load` and `module add` commands perform the same action,
 loading a module for use. Following the above,
@@ -356,28 +296,16 @@ submission script that tells the system how many compute nodes you want
 to reserve and for how long. You also need to use the `srun` command to
 launch your parallel executable.
 
-<div class="seealso">
+!!! tip
+    For a more details on the Slurm scheduler on ARCHER2 and writing job
+    submission scripts see the
+    [User and Best Practice Guide: Running jobs on ARCHER2](../user-guide/schedule)..
 
-For a more details on the Slurm scheduler on ARCHER2 and writing job
-submission scripts see the `../user-guide/scheduler` section of the User
-and Best Practice Guide.
-
-</div>
-
-<div class="warning">
-
-<div class="admonition-title">
-
-Warning
-
-</div>
-
-Parallel jobs on ARCHER2 should be run from the /work file system as
-/home is not available on the compute nodes - you will see a `chdir` or
-*file not found* error if you try to run a job from the /home file
-system.
-
-</div>
+!!! warning
+    Parallel jobs on ARCHER2 should be run from the /work file system as
+    /home is not available on the compute nodes - you will see a `chdir` or
+    *file not found* error if you try to run a job from the /home file
+    system.
 
 Create a job submission script called `submit.slurm` in your space on
 the work file system using your favourite text editor. For example,
@@ -386,20 +314,11 @@ using `vim`:
     auser@eslogin01:~> cd /work/t01/t01/auser
     auser@eslogin01:/work/t01/t01/auser> vim submit.slurm
 
-<div class="note">
-
-<div class="admonition-title">
-
-Note
-
-</div>
-
-You will need to use your project code and username to get to the
-correct directory. i.e. replace the <span class="title-ref">t01</span>
-above with your project code and replace the username
-<span class="title-ref">auser</span> with your ARCHER2 username.
-
-</div>
+!!! tip
+    You will need to use your project code and username to get to the
+    correct directory. i.e. replace the `t01`
+    above with your project code and replace the username
+    `auser` with your ARCHER2 username.
 
 Paste the following text into your job submission script, replacing
 `ENTER_YOUR_BUDGET_CODE_HERE` with your budget code e.g. `e99-ham`.
@@ -417,7 +336,7 @@ Paste the following text into your job submission script, replacing
     module load xthi
     
     # srun launches the parallel program based on the SBATCH options
-    srun --cppu-bind=cores xthi
+    srun --cpu-bind=cores xthi
 
 ## Submit your job to the queue
 
@@ -426,7 +345,7 @@ You submit your job to the queues using the `sbatch` command:
     auser@eslogin01:/work/t01/t01/auser> sbatch submit.slurm
     Submitted batch job 23996
     
-    The value returned is your *Job ID*.
+The value returned is your *Job ID*.
 
 ## Monitoring your job
 
@@ -493,18 +412,18 @@ You should use the following phrase to acknowledge ARCHER2 in all
 research outputs that have used the facility:
 
 This work used the ARCHER2 UK National Supercomputing Service
-(<https://www.archer2.ac.uk>).
+(https://www.archer2.ac.uk).
 
 You should also tag outputs with the keyword ARCHER2 whenever possible.
 
 ## Useful Links
 
 If you plan to compile your own programs on ARCHER2, you may also want
-to look at `quickstart-developers`.
+to look at [Quickstart guide for software developers](quickstart-developers).
 
 Links to other documentation you may find useful:
 
-  - `ARCHER2 User and Best Practice Guide <../user-guide/overview>` -
+  - [ARCHER2 User and Best Practice Guide](../user-guide/) -
     Covers all aspects of use of the ARCHER2 service. This includes
     fundamentals (required by all users to use the system effectively),
     best practice for getting the most out of ARCHER2, and more advanced

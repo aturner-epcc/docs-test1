@@ -1,9 +1,17 @@
 theme:
   name: material
+  favicon: favicon.ico
+  logo: images/ARCHER2_roundel.png
   palette:
-    logo: images/archer2_white_transparent.png
+    primary: white
+    
 
 site_name: ARCHER2
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
 
 nav:
   - "Home": index.md
@@ -11,7 +19,7 @@ nav:
     - quick-start/quickstart-users.md
     - quick-start/quickstart-developers.md
   - "User and Best Practice Guide":
-    - user-guide/connecting.md
+    - "Connecting to ARCHER2": user-guide/connecting.md
     - user-guide/data.md
     - user-guide/sw-environment.md
     - user-guide/scheduler.md
