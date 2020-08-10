@@ -1,14 +1,15 @@
 theme:
   name: material
   favicon: favicon.ico
-  logo: images/ARCHER2_roundel.png
+  logo: images/archer2_white_transparent.png
   palette:
-    primary: white
+    scheme: default
+    primary: indigo
   features:
     - tabs
     
 
-site_name: ARCHER2
+site_name: ARCHER2 User Documentation
 
 markdown_extensions:
   - admonition
@@ -16,8 +17,8 @@ markdown_extensions:
   - pymdownx.superfences
 
 nav:
-  - "Home": index.md
-  - "Quickstart": 
+  - "Documentation overview": index.md
+  - "Quickstart":
     - quick-start/quickstart-users.md
     - quick-start/quickstart-developers.md
   - "User and Best Practice Guide":
