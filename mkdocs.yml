@@ -4,6 +4,8 @@ theme:
   logo: images/ARCHER2_roundel.png
   palette:
     primary: white
+  features:
+    - tabs
     
 
 site_name: ARCHER2
